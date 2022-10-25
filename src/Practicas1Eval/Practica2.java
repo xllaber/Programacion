@@ -47,7 +47,7 @@ public class Practica2 {
     static void buildMainMenu(int rol) {
         if (rol == 0) {
             buildUserMenu(level);
-            option = sc.nextInt();
+            //option = sc.nextInt();
         } else if (rol == 1) {
             buildAdminMenu(level);
             
@@ -71,9 +71,9 @@ public class Practica2 {
             switch (level) {
                 case 1:
                     do {
-                        System.out.println("1.- ESDLA: El retorno del Rey");
-                        System.out.println("2.- Deadpool 1");
-                        System.out.println("3.- Avatar");
+                        System.out.println("1.- Casablanca");
+                        System.out.println("2.- El Padrino");
+                        System.out.println("3.- El Club de la Lucha");
                         System.out.println("0.- Volver");
                         System.out.println("--------------------------------");
                         System.out.print("Opcion: ");
