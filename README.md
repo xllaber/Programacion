@@ -1,6 +1,6 @@
 ## Ejercicios de Programación
 
-Ejercicios de programación de 1º de DAW.
+Ejercicios y prácticas de programación de 1º de DAW.
 
 ## Folder Structure
 
