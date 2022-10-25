@@ -47,7 +47,6 @@ public class Practica2 {
     static void buildMainMenu(int rol) {
         if (rol == 0) {
             buildUserMenu(level);
-            //option = sc.nextInt();
         } else if (rol == 1) {
             buildAdminMenu(level);
             
