@@ -18,12 +18,8 @@ public class ConjuntoFijo4a {
             num = sc.nextInt();
             conjunto.add(num);
         }
-        Object[] arrayConjunto = conjunto.toArray();
-        System.out.print("[ ");
-        for (Object object : arrayConjunto) {
-            System.out.print(object + ", ");
-        }
-        System.out.print("]");
+
+        System.out.print(conjunto);;
         sc.close();
     }
 }
