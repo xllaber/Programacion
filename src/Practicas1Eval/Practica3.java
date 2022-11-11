@@ -8,6 +8,8 @@ public class Practica3 {
 
     public static final int numBoats = 6;
     public static final int boardSize = 8;
+    public static final int totalShots = 2;
+    public static int shotsLeft = totalShots;
     public static Integer[][] board = new Integer[boardSize][boardSize];
     /*
      * 0: casilla cerrada vacia
@@ -17,34 +19,15 @@ public class Practica3 {
      */
 
     public static void main(String[] args) {
-        // for (int i = 0; i < board.length; i++) {
-        //     for (int j = 0; j < board[i].length; j++) {
-        //         board[i][j] = 2;
-        //     }
-        // }
         generateBoard();
         fillBoard();
         showBoard();
-        shoot();
+        game();
     }
 
     public static void generateBoard(){
-        // Random boatRow = new Random();
-        // Random boatCol = new Random();
-        // for (int i = 0; i <= 6; i++) {
-        //     int row = boatRow.nextInt(7);
-        //     int col = boatCol.nextInt(7);
-        //     board[row][col] = 3;
-        // }
-        // for (int i = 0; i < board.length; i++) {
-        //     for (int j = 0; j < board[i].length; j++) {
-        //         if (board[i][j] == null) {
-        //             board[i][j] = 2;
-        //         }
-        //     }
-        // }
         for (Integer[] row : board) {
-            Arrays.fill(row, 2);
+            Arrays.fill(row, 0);
         }
     }
 
@@ -53,31 +36,33 @@ public class Practica3 {
         while (boatsLeft >= 0) {
             int row =  (int)(Math.random() * boardSize);
             int col =  (int)(Math.random() * boardSize);
-            if (board[row][col] == 2) {
-                board[row][col] = 3;
+            if (board[row][col] == 0) {
+                board[row][col] = 1;
             }
             boatsLeft--;
         }
     }
 
     public static void showBoard(){
+        System.out.println("Te quedan: " + shotsLeft + " disparos.");
         for (Integer[] row : board) {
             for (Integer col : row) {
-                if (col == 2 || col == 3){
+                if (col == 0 || col == 1){
                     System.out.print("( )");
-                }else if (col == 0){
-                    System.out.print(" 0 ");
-                }else if (col == 1){
-                    System.out.print(" x ");
+                }else if (col == 2){
+                    System.out.print("(0)");
+                }else if (col == 3){
+                    System.out.print("(x)");
                 }
             }
             System.out.println();
         }
-        shoot();
+        game();
     }
 
-    public static void shoot(){
+    public static void game(){
         Scanner sc = new Scanner(System.in);
+        int boatsDestroyed = 0;
          
         System.out.println("Introduce 0 para salir.");
         System.out.print("Introduce la fila: ");
@@ -90,16 +75,50 @@ public class Practica3 {
         if (colShot == 0) {
             System.exit(0);
         }
-        rowShot -= 1;
-        colShot -= 1;
-        if (board[rowShot][colShot] == 2) {
-            board[rowShot][colShot] = 0;
-        }else if(board[rowShot][colShot] == 3){
-            board[rowShot][colShot] = 1;
-        }
+        if (rowShot > boardSize || colShot > boardSize) {
+            System.out.println("La casilla introducida esta fuera del tablero. Apunta mejor");
+            shotsLeft--;
+            showBoard();
+        }else{
+            rowShot -= 1;
+            colShot -= 1;
+            if (board[rowShot][colShot] == 2 || board[rowShot][colShot] == 3) {
+            shotsLeft--;
+                System.out.println("Ya has disparado aqui. Apunta mejor.");
+                shotsLeft--;
+                showBoard();
+            }else if (board[rowShot][colShot] == 0) {
+                board[rowShot][colShot] = 2;
+                shotsLeft--;
+            }else if(board[rowShot][colShot] == 1){
+                board[rowShot][colShot] = 3;
+                shotsLeft--;
+                boatsDestroyed++;
+            }
+            }
+            if (boatsDestroyed == numBoats){
+                showBoard();
+                System.out.println("Has acabado con el yugo del dictador. Enhorabuena.");
+                System.exit(0);
+            }else if (shotsLeft == 0) {
+                System.out.println("Te has quedado sin disparos. El dictador sigue su mandato.");
+            }
         showBoard();
         sc.close();
     }
+
+    // public static boolean checkCell(int rowShot, int colShot){
+    //     if (rowShot > boardSize || colShot > boardSize) {
+    //         System.out.println("La casilla introducida esta fuera del tablero. Apunta mejor");
+    //         return false;
+    //     } else if (board[rowShot][colShot] == 2 || board[rowShot][colShot] == 3) {
+    //         System.out.println("Ya has disparado aqui. Apunta mejor.");
+    //         return false;
+    //     }else{
+    //         return true;
+    //     }
+        
+    // }
 
 
 }
