@@ -63,7 +63,7 @@ public class Practica3 {
 
     public static void game(){
         Scanner sc = new Scanner(System.in);
-         
+        
         System.out.println("Introduce 0 para salir.");
         System.out.print("Introduce la fila: ");
         int rowShot = sc.nextInt();
@@ -75,19 +75,10 @@ public class Practica3 {
         if (colShot == 0) {
             System.exit(0);
         }
-        if (rowShot > boardSize || colShot > boardSize) {
-            System.out.println("La casilla introducida esta fuera del tablero. Apunta mejor");
-            shotsLeft--;
-            showBoard();
-        }else{
-            rowShot -= 1;
-            colShot -= 1;
-            if (board[rowShot][colShot] == 2 || board[rowShot][colShot] == 3) {
-                shotsLeft--;
-                System.out.println("Ya has disparado aqui. Apunta mejor.");
-                shotsLeft--;
-                //showBoard();
-            }else if (board[rowShot][colShot] == 0) {
+        rowShot -= 1;
+        colShot -= 1;
+        if(checkCell(rowShot, colShot)){
+            if (board[rowShot][colShot] == 0) {
                 board[rowShot][colShot] = 2;
                 shotsLeft--;
             }else if(board[rowShot][colShot] == 1){
@@ -95,30 +86,29 @@ public class Practica3 {
                 shotsLeft--;
                 boatsDestroyed++;
             }
-            }
-            if (boatsDestroyed == numBoats){
-                System.out.println("Has ganado y acabado con el yugo del dictador. Enhorabuena.");
-                System.exit(0);
-            }else if (shotsLeft == 0) {
-                System.out.println("Te has quedado sin disparos. Has perdido, el dictador sigue su mandato.");
-                System.exit(0);
-            }
+        }
+        if (boatsDestroyed == numBoats){
+            System.out.println("Has ganado y acabado con el yugo del dictador. Enhorabuena.");
+            System.exit(0);
+        }else if (shotsLeft == 0) {
+            System.out.println("Te has quedado sin disparos. Has perdido, el dictador sigue su mandato.");
+            System.exit(0);
+        }
         showBoard();
         sc.close();
     }
 
-    // // public static boolean checkCell(int rowShot, int colShot){
-    // //     if (rowShot > boardSize || colShot > boardSize) {
-    // //         System.out.println("La casilla introducida esta fuera del tablero. Apunta mejor");
-    // //         return false;
-    // //     } else if (board[rowShot][colShot] == 2 || board[rowShot][colShot] == 3) {
-    // //         System.out.println("Ya has disparado aqui. Apunta mejor.");
-    // //         return false;
-    // //     }else{
-    // //         return true;
-    // //     }
-        
-    // // }
-
-
+    public static boolean checkCell(int rowShot, int colShot){
+        if (rowShot > boardSize || colShot >= boardSize) {
+            System.out.println("La casilla introducida esta fuera del tablero. Apunta mejor");
+            shotsLeft--;
+            return false;
+        } else if (board[rowShot][colShot] == 2 || board[rowShot][colShot] == 3) {
+            System.out.println("Ya has disparado aqui. Apunta mejor.");
+            shotsLeft--;
+            return false;
+        }else{
+            return true;
+        }
+    }
 }
