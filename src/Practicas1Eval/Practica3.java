@@ -1,7 +1,6 @@
 package Practicas1Eval;
 
 import java.util.Arrays;
-// import java.util.Random;
 import java.util.Scanner;
 
 public class Practica3 {
