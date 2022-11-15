@@ -22,14 +22,14 @@ public class Practica3 {
         Scanner scOption = new Scanner(System.in);
         int option;
         System.out.println("Bienvenido a hundir la flota.");
-        System.out.println("Para enfrentarte el cruel dictador pulsa 1.");
+        System.out.println("Para enfrentarte al cruel dictador pulsa 1.");
         System.out.println("Si eres un cobarde y queres huir pulsa 2.");
         option = scOption.nextInt();
         if (option == 1){
             generateBoard();
             fillBoard();
             showBoard();
-            game();
+            //game();
         }else if(option == 2){
             System.out.println("Me lo esperba, la verdad");
         }else{
@@ -76,7 +76,7 @@ public class Practica3 {
     public static void game(){
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Introduce 0 para salir.");
+        System.out.println("Introduce 0 para huir.");
         System.out.print("Introduce la fila: ");
         int rowShot = sc.nextInt();
         if (rowShot == 0) {
