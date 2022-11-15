@@ -107,18 +107,18 @@ public class Practica3 {
         sc.close();
     }
 
-    // public static boolean checkCell(int rowShot, int colShot){
-    //     if (rowShot > boardSize || colShot > boardSize) {
-    //         System.out.println("La casilla introducida esta fuera del tablero. Apunta mejor");
-    //         return false;
-    //     } else if (board[rowShot][colShot] == 2 || board[rowShot][colShot] == 3) {
-    //         System.out.println("Ya has disparado aqui. Apunta mejor.");
-    //         return false;
-    //     }else{
-    //         return true;
-    //     }
+    // // public static boolean checkCell(int rowShot, int colShot){
+    // //     if (rowShot > boardSize || colShot > boardSize) {
+    // //         System.out.println("La casilla introducida esta fuera del tablero. Apunta mejor");
+    // //         return false;
+    // //     } else if (board[rowShot][colShot] == 2 || board[rowShot][colShot] == 3) {
+    // //         System.out.println("Ya has disparado aqui. Apunta mejor.");
+    // //         return false;
+    // //     }else{
+    // //         return true;
+    // //     }
         
-    // }
+    // // }
 
 
 }
