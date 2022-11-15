@@ -7,7 +7,7 @@ public class Practica3 {
 
     public static final int numBoats = 6;
     public static final int boardSize = 8;
-    public static final int totalShots = 2000;
+    public static final int totalShots = 64;
     public static int shotsLeft = totalShots;
     public static int boatsDestroyed = 0;
     public static Integer[][] board = new Integer[boardSize][boardSize];
