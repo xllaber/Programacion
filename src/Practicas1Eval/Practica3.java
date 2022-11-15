@@ -86,7 +86,7 @@ public class Practica3 {
                 shotsLeft--;
                 System.out.println("Ya has disparado aqui. Apunta mejor.");
                 shotsLeft--;
-                //showBoard();
+                showBoard();
             }else if (board[rowShot][colShot] == 0) {
                 board[rowShot][colShot] = 2;
                 shotsLeft--;
