@@ -8,8 +8,9 @@ public class Practica3 {
 
     public static final int numBoats = 6;
     public static final int boardSize = 8;
-    public static final int totalShots = 2;
+    public static final int totalShots = 2000;
     public static int shotsLeft = totalShots;
+    public static int boatsDestroyed = 0;
     public static Integer[][] board = new Integer[boardSize][boardSize];
     /*
      * 0: casilla cerrada vacia
@@ -62,7 +63,6 @@ public class Practica3 {
 
     public static void game(){
         Scanner sc = new Scanner(System.in);
-        int boatsDestroyed = 0;
          
         System.out.println("Introduce 0 para salir.");
         System.out.print("Introduce la fila: ");
@@ -97,7 +97,6 @@ public class Practica3 {
             }
             }
             if (boatsDestroyed == numBoats){
-                showBoard();
                 System.out.println("Has ganado y acabado con el yugo del dictador. Enhorabuena.");
                 System.exit(0);
             }else if (shotsLeft == 0) {
