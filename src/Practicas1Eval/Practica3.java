@@ -83,10 +83,10 @@ public class Practica3 {
             rowShot -= 1;
             colShot -= 1;
             if (board[rowShot][colShot] == 2 || board[rowShot][colShot] == 3) {
-            shotsLeft--;
+                shotsLeft--;
                 System.out.println("Ya has disparado aqui. Apunta mejor.");
                 shotsLeft--;
-                showBoard();
+                //showBoard();
             }else if (board[rowShot][colShot] == 0) {
                 board[rowShot][colShot] = 2;
                 shotsLeft--;
@@ -98,10 +98,11 @@ public class Practica3 {
             }
             if (boatsDestroyed == numBoats){
                 showBoard();
-                System.out.println("Has acabado con el yugo del dictador. Enhorabuena.");
+                System.out.println("Has ganado y acabado con el yugo del dictador. Enhorabuena.");
                 System.exit(0);
             }else if (shotsLeft == 0) {
-                System.out.println("Te has quedado sin disparos. El dictador sigue su mandato.");
+                System.out.println("Te has quedado sin disparos. Has perdido, el dictador sigue su mandato.");
+                System.exit(0);
             }
         showBoard();
         sc.close();
