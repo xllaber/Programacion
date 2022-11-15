@@ -19,10 +19,23 @@ public class Practica3 {
      */
 
     public static void main(String[] args) {
-        generateBoard();
-        fillBoard();
-        showBoard();
-        game();
+        Scanner scOption = new Scanner(System.in);
+        int option;
+        System.out.println("Bienvenido a hundir la flota.");
+        System.out.println("Para enfrentarte el cruel dictador pulsa 1.");
+        System.out.println("Si eres un cobarde y queres huir pulsa 2.");
+        option = scOption.nextInt();
+        if (option == 1){
+            generateBoard();
+            fillBoard();
+            showBoard();
+            game();
+        }else if(option == 2){
+            System.out.println("Me lo esperba, la verdad");
+        }else{
+            System.out.println("Como vas a derrotar a un dictador si no sabes ni leer.");
+        }
+        scOption.close();
     }
 
     public static void generateBoard(){
