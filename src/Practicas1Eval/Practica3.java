@@ -29,7 +29,6 @@ public class Practica3 {
             generateBoard();
             fillBoard();
             showBoard();
-            //game();
         }else if(option == 2){
             System.out.println("Me lo esperba, la verdad");
         }else{
