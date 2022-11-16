@@ -11,6 +11,7 @@ public class Practica3 {
     public static int shotsLeft = totalShots;
     public static int boatsDestroyed = 0;
     public static Integer[][] board = new Integer[boardSize][boardSize];
+    
     /*
      * 0: casilla cerrada vacia
      * 1: casilla cerrada con barco
