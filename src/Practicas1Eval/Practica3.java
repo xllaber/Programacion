@@ -51,8 +51,8 @@ public class Practica3 {
             int col =  (int)(Math.random() * boardSize);
             if (board[row][col] == 0) {
                 board[row][col] = 1;
+                boatsLeft--;
             }
-            boatsLeft--;
         }
     }
 
@@ -111,7 +111,7 @@ public class Practica3 {
     }
 
     public static boolean checkCell(int rowShot, int colShot){
-        if (rowShot > boardSize || colShot >= boardSize) {
+        if (rowShot >= boardSize || colShot >= boardSize) {
             System.out.println("La casilla introducida esta fuera del tablero. Apunta mejor");
             shotsLeft--;
             return false;
