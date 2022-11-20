@@ -5,10 +5,9 @@ import java.util.Scanner;
 
 public class Practica3 {
 
-    public static final int numBoats = 6;
-    public static final int boardSize = 8;
-    public static final int totalShots = 64;
-    public static int shotsLeft = totalShots;
+    public static final int numBoats = 1;
+    public static final int boardSize = 2;
+    public static int totalShots, shotsLeft;
     public static int boatsDestroyed = 0;
     public static Integer[][] board = new Integer[boardSize][boardSize];
     
@@ -24,9 +23,12 @@ public class Practica3 {
         int option;
         System.out.println("Bienvenido a hundir la flota.");
         System.out.println("Para enfrentarte al cruel dictador pulsa 1.");
-        System.out.println("Si eres un cobarde y queres huir pulsa 2.");
+        System.out.println("Si eres un cobarde y quieres huir pulsa 2.");
         option = scOption.nextInt();
         if (option == 1){
+            System.out.println("¿Cuantos dispros crees que vas a necesitar?");
+            totalShots = scOption.nextInt();
+            shotsLeft = totalShots;
             generateBoard();
             fillBoard();
             showBoard();
@@ -70,6 +72,13 @@ public class Practica3 {
             }
             System.out.println();
         }
+        if (boatsDestroyed == numBoats) {
+            System.out.println("Has ganado la guerra y acabado con el yugo del dictador. Enhorabuena.");
+            System.exit(0);
+        }else if (shotsLeft == 0) {
+            System.out.println("Te has quedado sin disparos. Has perdido, el dictador sigue su mandato.");
+            System.exit(0);
+        }
         game();
     }
 
@@ -98,13 +107,6 @@ public class Practica3 {
                 shotsLeft--;
                 boatsDestroyed++;
             }
-        }
-        if (boatsDestroyed == numBoats){
-            System.out.println("Has ganado y acabado con el yugo del dictador. Enhorabuena.");
-            System.exit(0);
-        }else if (shotsLeft == 0) {
-            System.out.println("Te has quedado sin disparos. Has perdido, el dictador sigue su mandato.");
-            System.exit(0);
         }
         showBoard();
         sc.close();
