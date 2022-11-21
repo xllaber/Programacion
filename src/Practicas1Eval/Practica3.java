@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Practica3 {
 
-    public static final int numBoats = 1;
-    public static final int boardSize = 2;
+    public static final int numBoats = 6;
+    public static final int boardSize = 8;
     public static int totalShots, shotsLeft;
     public static int boatsDestroyed = 0;
     public static Integer[][] board = new Integer[boardSize][boardSize];
