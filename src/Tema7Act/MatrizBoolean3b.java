@@ -9,7 +9,7 @@ public class MatrizBoolean3b {
         for (boolean[] elementRow : matrix0) {
             for (boolean elementCol : elementRow) {
                 if (elementCol) {
-                   System.out.print("0");
+                    System.out.print("0");
                 }else{
                     System.out.print(" ");
                 }
@@ -20,7 +20,7 @@ public class MatrizBoolean3b {
         for (boolean[] elementRow : matrix1) {
             for (boolean elementCol : elementRow) {
                 if (elementCol) {
-                   System.out.print("0");
+                    System.out.print("0");
                 }else{
                     System.out.print(" ");
                 }

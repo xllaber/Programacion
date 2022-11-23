@@ -16,7 +16,7 @@ public class ConjuntoVariable4c {
             System.out.print("Introduce un numero: ");
             num = sc.nextInt();
             if (num != 0) {
-                 if (num % 2 == 0) {
+                if (num % 2 == 0) {
                     conjuntoPar.add(num);
                 }else if (num % 2 != 0) {
                     conjuntoImpar.add(num);

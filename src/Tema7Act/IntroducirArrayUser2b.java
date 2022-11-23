@@ -10,9 +10,9 @@ public class IntroducirArrayUser2b {
         int[] numbers = new int[longitud];
         introduceArray(numbers);
         System.out.println("El array introducido es: ");
-       for (int i = 0; i < numbers.length; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             System.out.print(numbers[i] + " ");
-       }
+        }
     }
 
     static int[] introduceArray(int numbers[]){

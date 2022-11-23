@@ -7,7 +7,7 @@ public class MatrizBoolean3a {
         for (boolean[] elementRow : matrix) {
             for (boolean elementCol : elementRow) {
                 if (elementCol) {
-                   System.out.print("0");
+                    System.out.print("0");
                 }else{
                     System.out.print(" ");
                 }
