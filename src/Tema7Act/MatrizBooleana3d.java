@@ -18,6 +18,7 @@ public class MatrizBooleana3d {
         System.out.print("Introduce un numero decimal:");
         num = sc.nextDouble();
         calcBin(num);
+        sc.close();
     }
 
     public static void calcBin(double num){
