@@ -1,4 +1,4 @@
-package Tema7Act;
+package EV1.Tema7Act;
 
 public class ArrayNumCuadrado1b {
     public static void main(String[] args) {

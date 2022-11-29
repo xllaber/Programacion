@@ -1,4 +1,5 @@
-package Tema7Act;
+package EV1.Tema7Act;
+
 import java.util.Scanner;
 
 public class IntroducirArrayUser2b {

@@ -1,4 +1,4 @@
-package Tema1.Actividades;
+package EV1.Tema1.Actividades;
 
 import java.util.Scanner;
 
@@ -17,5 +17,6 @@ public class AreaTriangulo3_1c
         altura = reader.nextFloat();
         area = (base*altura)/2;
         System.out.println("El area es: " + area + "m^2");
+        reader.close();
     }        
 }

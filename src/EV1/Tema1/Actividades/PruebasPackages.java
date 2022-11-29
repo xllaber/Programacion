@@ -1,4 +1,4 @@
-package Tema1.Actividades;
+package EV1.Tema1.Actividades;
 
 public class PruebasPackages {
     public static void main(String[] args)

@@ -1,4 +1,4 @@
-package Practicas1Eval;
+package EV1.Practicas1Eval;
 
 import java.util.Arrays;
 import java.util.Scanner;

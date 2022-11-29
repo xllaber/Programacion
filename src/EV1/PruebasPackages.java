@@ -1,3 +1,5 @@
+package EV1;
+
 public class PruebasPackages {
         public static void main(String[] args)
         {

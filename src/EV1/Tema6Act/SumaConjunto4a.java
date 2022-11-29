@@ -1,4 +1,4 @@
-package Tema6Act;
+package EV1.Tema6Act;
 
 public class SumaConjunto4a {
     public static void main(String[] args) {

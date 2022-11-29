@@ -1,4 +1,4 @@
-package Tema7Act;
+package EV1.Tema7Act;
 
 public class MatrizBoolean3b {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Tema1.Actividades;
+package EV1.Tema1.Actividades;
 
 import java.util.Scanner;
 
@@ -16,5 +16,6 @@ public class TablaMultiplicarTeclado
             System.out.println(numero*i);
             i++;
         }
+        reader.close();
     }    
 }

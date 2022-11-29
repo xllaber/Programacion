@@ -1,4 +1,4 @@
-package Tema4Act;
+package EV1.Tema4Act;
 
 import java.util.Scanner;
 
