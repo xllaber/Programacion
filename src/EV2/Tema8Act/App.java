@@ -32,18 +32,38 @@ public class App {
         coche3.velocidad = 0;
         flota.addCoche(coche3);
 
+        Conductor conductor1 = new Conductor();
+        conductor1.nombre = "Juan";
+        conductor1.cocheAsignado = conductor1.asignarCoche(12345, flota);
+
+        Conductor conductor2 = new Conductor();
+        conductor2.nombre = "Ana";
+        
+
         System.out.println(coche1.toString());
 
         flota.muestraLista();
         System.out.println();
         System.out.println("Introduce el bastidor del coche a eliminar: ");
         int bastidor = sc.nextInt();
-        flota.eliminarCoche(bastidor);
-        if (flota.eliminarCoche(bastidor)) {
-            System.out.println("El coche no se encuentra en la flota");
-        }else{
-            flota.muestraLista();
+
+        conductor2.asignarCoche2(flota.buscaCoche(bastidor));
+        System.out.println(conductor2.muestraConductor());
+
+        System.out.println(conductor1.muestraConductor());
+        conductor1.eliminarAsignado();
+        System.out.println(conductor1.muestraConductor());
+        System.out.println(conductor2.muestraConductor());
+        if (!conductor2.eliminarAsignado()) {
+            System.out.println("Este conductor no tiene nigun coche asignado");
         }
+        // if (flota.eliminarCoche(bastidor)) {
+        //     flota.muestraLista();
+        // }else{
+        //     System.out.println("El coche no se encuentra en la flota");
+        // }
+        System.out.println(flota.eliminarCoche2(bastidor));
+        flota.muestraLista();
 
         System.out.print("Introduce la variacion de velocidad: ");
         int velocidad = sc.nextInt();
@@ -52,5 +72,6 @@ public class App {
         System.out.println(coche1.velocidad);
         coche1.reduceVelocidad(velocidad);
         System.out.println(coche1.velocidad);
+        sc.close();
     }
 }
