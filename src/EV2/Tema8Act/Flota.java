@@ -33,10 +33,19 @@ public class Flota {
         return respuesta;
     }
 
-    public void muestraLista(){
+    // public void muestraLista(){
+    //     for (Coche coche : coches) {
+    //         System.out.println(coche.toString());
+    //     }
+    // }
+
+    public String toString(){
+        StringBuilder respuesta = new StringBuilder();
         for (Coche coche : coches) {
-            System.out.println(coche.toString());
+            respuesta.append(coche.toString());
+            respuesta.append("\n");
         }
+        return respuesta.toString();
     }
 
     public Coche buscaCoche(int bastidor){

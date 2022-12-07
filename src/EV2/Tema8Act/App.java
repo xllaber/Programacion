@@ -42,7 +42,7 @@ public class App {
 
         System.out.println(coche1.toString());
 
-        flota.muestraLista();
+        System.out.println(flota.toString());
         System.out.println();
         System.out.println("Introduce el bastidor del coche a eliminar: ");
         int bastidor = sc.nextInt();
@@ -63,7 +63,7 @@ public class App {
         //     System.out.println("El coche no se encuentra en la flota");
         // }
         System.out.println(flota.eliminarCoche2(bastidor));
-        flota.muestraLista();
+        System.out.println(flota.toString());
 
         System.out.print("Introduce la variacion de velocidad: ");
         int velocidad = sc.nextInt();
