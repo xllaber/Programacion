@@ -8,36 +8,40 @@ public class App {
 
         Flota flota = new Flota();
 
-        Coche coche1 = new Coche();
-        coche1.marca = "Opel";
-        coche1.modelo = "Corsa";
-        coche1.color = "Blanco";
-        coche1.numBastidor = 12345;
-        coche1.velocidad = 0;
+        // Coche coche1 = new Coche();
+        // coche1.setMarca("Opel");
+        // coche1.setModelo("Corsa");
+        // coche1.setColor("Blanco");
+        // coche1.setNumBastidor(12345);
+
+        Coche coche1 = new Coche("Opel", "Corsa", "Blanco", 12345);
+        coche1.setVelocidad(0);
         flota.addCoche(coche1);
 
-        Coche coche2 = new Coche();
-        coche2.marca = "Audi";
-        coche2.modelo = "Q2";
-        coche2.color = "Azul";
-        coche2.numBastidor = 23456;
-        coche2.velocidad = 0;
+        // Coche coche2 = new Coche();
+        // coche2.setMarca("Audi");
+        // coche2.setModelo("Q2");
+        // coche2.setColor("Negro");
+        // coche2.setNumBastidor(56789);
+
+        Coche coche2 = new Coche("Audi", "Q2", "Negro", 56789);
+        coche2.setVelocidad(0);
         flota.addCoche(coche2);
 
-        Coche coche3 = new Coche();
-        coche3.marca = "Ford";
-        coche3.modelo = "Fiesta";
-        coche3.color = "Rojo";
-        coche3.numBastidor = 54321;
-        coche3.velocidad = 0;
+        // Coche coche3 = new Coche();
+        // coche3.setMarca("Ford");
+        // coche3.setModelo("Fiesta");
+        // coche3.setColor("Rojo");
+        // coche3.setNumBastidor(54321);
+
+        Coche coche3 = new Coche("Ford", "Fiesta", "Rojo", 54321);
+        coche3.setVelocidad(0);
         flota.addCoche(coche3);
 
-        Conductor conductor1 = new Conductor();
-        conductor1.nombre = "Juan";
-        conductor1.cocheAsignado = conductor1.asignarCoche(12345, flota);
+        Conductor conductor1 = new Conductor("Juan");
+        conductor1.setCocheAsignado(conductor1.asignarCoche(12345, flota));
 
-        Conductor conductor2 = new Conductor();
-        conductor2.nombre = "Ana";
+        Conductor conductor2 = new Conductor("Ana");
         
 
         System.out.println(coche1.toString());
@@ -69,9 +73,9 @@ public class App {
         int velocidad = sc.nextInt();
 
         coche1.aumentaVelocidad(velocidad);
-        System.out.println(coche1.velocidad);
+        System.out.println(coche1.getVelocidad());
         coche1.reduceVelocidad(velocidad);
-        System.out.println(coche1.velocidad);
+        System.out.println(coche1.getVelocidad());
         sc.close();
     }
 }

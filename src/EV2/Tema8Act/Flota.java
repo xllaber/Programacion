@@ -12,7 +12,7 @@ public class Flota {
 
     public boolean eliminarCoche(int bastidor){
         for (Coche coche : coches) {
-            if (coche.numBastidor == bastidor) {
+            if (coche.getNumBastidor() == bastidor) {
                 coches.remove(coche);
                 return true;
             }
@@ -23,12 +23,12 @@ public class Flota {
     public String eliminarCoche2(int bastidor){
         String respuesta = "";
         for (Coche coche : coches) {
-            if (coche.numBastidor == bastidor) {
+            if (coche.getNumBastidor() == bastidor) {
                 coches.remove(coche);
-                respuesta = "Se ha eliminado el coche con numero de bastidor " + coche.numBastidor;
+                respuesta = "Se ha eliminado el coche con numero de bastidor " + coche.getNumBastidor();
                 return respuesta;
             }
-            respuesta = "No existe ningun coche con numero de bastidor " + coche.numBastidor;
+            respuesta = "No existe ningun coche con numero de bastidor " + coche.getNumBastidor();
         }
         return respuesta;
     }
@@ -50,7 +50,7 @@ public class Flota {
 
     public Coche buscaCoche(int bastidor){
         for (Coche coche : coches) {
-            if (coche.numBastidor == bastidor) {
+            if (coche.getNumBastidor() == bastidor) {
                 return coche;
             }
         }
