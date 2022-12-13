@@ -27,7 +27,7 @@ public class Conductor {
         return cocheAsignado;
     }
 
-    public String muestraConductor(){
+    public String toString(){
         if (cocheAsignado == null) {
             return String.format("%s no tiene coche asignado", nombre);
         }

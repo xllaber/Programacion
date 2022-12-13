@@ -52,12 +52,12 @@ public class App {
         int bastidor = sc.nextInt();
 
         conductor2.asignarCoche2(flota.buscaCoche(bastidor));
-        System.out.println(conductor2.muestraConductor());
+        System.out.println(conductor2.toString());
 
-        System.out.println(conductor1.muestraConductor());
+        System.out.println(conductor1.toString());
         conductor1.eliminarAsignado();
-        System.out.println(conductor1.muestraConductor());
-        System.out.println(conductor2.muestraConductor());
+        System.out.println(conductor1.toString());
+        System.out.println(conductor2.toString());
         if (!conductor2.eliminarAsignado()) {
             System.out.println("Este conductor no tiene nigun coche asignado");
         }
