@@ -15,8 +15,7 @@ public class Conductor {
 
     public Coche asignarCoche(int bastidor, Flota coches){
         cocheAsignado = coches.buscaCoche(bastidor);
-        if(coches.buscaCoche(bastidor) == null){
-            cocheAsignado = null;
+        if(cocheAsignado == null){
             return cocheAsignado;
         }
         return cocheAsignado;
