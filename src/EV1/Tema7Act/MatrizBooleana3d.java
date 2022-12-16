@@ -8,9 +8,9 @@ public class MatrizBooleana3d {
 
     static List<Integer> lista = new ArrayList<>();
     public static void main(String[] args) {
-        boolean[][] matrix0 = {{true, true, true, true, true}, {true, false, false, false, true}, {true, false, false, false, true}, {true, false, false, false, true}, {true, false, false, false, true}, {true, false, false, false, true}, {true, false, false, false, true}, {true, true, true, true, true}};
+        //boolean[][] matrix0 = {{true, true, true, true, true}, {true, false, false, false, true}, {true, false, false, false, true}, {true, false, false, false, true}, {true, false, false, false, true}, {true, false, false, false, true}, {true, false, false, false, true}, {true, true, true, true, true}};
 
-        boolean[][] matrix1 = {{false, false, false, false, true}, {false, false, false, true, true}, {false, false,  true, false, true}, {false, true, false, false, true}, {true, false, false, false, true}, {false, false, false, false, true},{false, false, false, false, true}, {false, false, false, false, true}};
+       // boolean[][] matrix1 = {{false, false, false, false, true}, {false, false, false, true, true}, {false, false,  true, false, true}, {false, true, false, false, true}, {true, false, false, false, true}, {false, false, false, false, true},{false, false, false, false, true}, {false, false, false, false, true}};
 
         Scanner sc = new Scanner(System.in);
         double num;

@@ -6,6 +6,7 @@ public class NumerosPares6c {
     public static void main(String[] args) {
         int num;
         Scanner sc = new Scanner(System.in);
+        sc.close();
         
         System.out.print("Dime un numero: ");
         num = sc.nextInt();
