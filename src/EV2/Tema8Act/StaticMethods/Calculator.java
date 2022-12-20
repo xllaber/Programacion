@@ -4,6 +4,9 @@ public class Calculator {
 
     private static int result;
 
+    //Singleton object creation check
+    //private Singleton instance = Singleton.getInstance();
+
     public static int add(int num1, int num2){
         result = num1 + num2;
         return result;
