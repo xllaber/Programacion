@@ -1,4 +1,4 @@
-package EV2.Tema8Act;
+package EV2.Tema8Act.Coche;
 
 public class Conductor {
     private String nombre;
