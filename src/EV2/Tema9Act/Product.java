@@ -27,8 +27,8 @@ public class Product {
 
     @Override
     public String toString(){
-        return "{ID: " + this.id +
-                "\n Price: " + this.price + 
+        return "{\nID: " + this.id +
+                "\nPrice: " + this.price + 
                 "\n}"; 
     }
 }
